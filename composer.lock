@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andresandoval992/php-lazy-loader.git",
-                "reference": "c3db3045851d65d74c9e1e92dee66ff7aba06b56"
+                "reference": "bb1762c0ea73611e721d5ffd49c7bdf21d1cbacc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andresandoval992/php-lazy-loader/zipball/c3db3045851d65d74c9e1e92dee66ff7aba06b56",
-                "reference": "c3db3045851d65d74c9e1e92dee66ff7aba06b56",
+                "url": "https://api.github.com/repos/andresandoval992/php-lazy-loader/zipball/bb1762c0ea73611e721d5ffd49c7bdf21d1cbacc",
+                "reference": "bb1762c0ea73611e721d5ffd49c7bdf21d1cbacc",
                 "shasum": ""
             },
             "type": "library",
@@ -35,7 +35,7 @@
                 "source": "https://github.com/andresandoval992/php-lazy-loader/tree/master",
                 "issues": "https://github.com/andresandoval992/php-lazy-loader/issues"
             },
-            "time": "2017-09-04T15:16:55+00:00"
+            "time": "2017-09-04T21:50:17+00:00"
         }
     ],
     "packages-dev": [],
