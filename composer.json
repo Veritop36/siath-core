@@ -1,0 +1,22 @@
+{
+  "name": "vlzambranoh/siath-core",
+  "description": "Backend para siath",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lisbeth",
+      "email": "veronica.zambrano3693@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/andresandoval992/php-lazy-loader"
+    }
+  ],
+  "require": {
+    "andresandoval/php-lazy-loader": "dev-master"
+  }
+}

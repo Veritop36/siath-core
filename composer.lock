@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8e4ce28112d967ad279087a852ace5bd",
+    "packages": [
+        {
+            "name": "andresandoval/php-lazy-loader",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andresandoval992/php-lazy-loader.git",
+                "reference": "c3db3045851d65d74c9e1e92dee66ff7aba06b56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andresandoval992/php-lazy-loader/zipball/c3db3045851d65d74c9e1e92dee66ff7aba06b56",
+                "reference": "c3db3045851d65d74c9e1e92dee66ff7aba06b56",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andres Sandoval",
+                    "email": "andresandoval992@gmail.com"
+                }
+            ],
+            "description": "PHP Lazy Loadder es una libreria para manejar peticiones restfull a PHP, y soporte para mapeo de objetos (aka: Hibernate)",
+            "support": {
+                "source": "https://github.com/andresandoval992/php-lazy-loader/tree/master",
+                "issues": "https://github.com/andresandoval992/php-lazy-loader/issues"
+            },
+            "time": "2017-09-04T15:16:55+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "andresandoval/php-lazy-loader": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
