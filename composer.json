@@ -17,6 +17,7 @@
     }
   ],
   "require": {
-    "andresandoval/php-lazy-loader": "dev-master"
+    "andresandoval/php-lazy-loader": "dev-master",
+    "firebase/php-jwt": "^5.0"
   }
 }

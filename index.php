@@ -27,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 require_once "config.php";
 require_once "routes.php";
 require_once "utils/StringUtil.php";
-require_once "vendor/andresandoval/php-lazy-loader/index.php";
-
 require_once "views/BaseView.php";
+require_once "vendor/andresandoval/php-lazy-loader/index.php";
+require_once "vendor/autoload.php";
 
 use lazyLoader\controller\ControllerHandler;
 

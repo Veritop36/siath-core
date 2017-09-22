@@ -12,6 +12,7 @@ require_once "controllers/BaseController.php";
 require_once "services/users/UserService.php";
 require_once "views/users/LoginView.php";
 
+use Firebase\JWT\JWT;
 use lazyLoader\utils\ResponseUtil;
 use siath\controllers\BaseController;
 use siath\services\users\UserService;
@@ -23,6 +24,15 @@ final class UserController extends BaseController {
 
     function __construct() {
         $this->userService = new UserService();
+    }
+
+    private function generateToken() {
+        $key = "secret key";
+        $token = [
+            "user" => "user",
+            "password" => "pass"
+        ];
+        return JWT::encode($token, $key);
     }
 
     /**
@@ -43,12 +53,12 @@ final class UserController extends BaseController {
         if (is_null($tableUser))
             return ControllerResponse::response202(false, "El usuario no tiene cuenta en el sistema");
 
-        if($tableUser->getAccountStatus() != "OPEN")
+        if ($tableUser->getAccountStatus() != "OPEN")
             return ControllerResponse::response202(false, "El usuario no tiene activa la cuenta");
         $secureLdapPasswd = \md5($postValues->password);
 
-        if($secureLdapPasswd != $tableUser->getPassword()){
-            if(!$this->userService->updateUserPassword($tableUser, $postValues->password, $secureLdapPasswd))
+        if ($secureLdapPasswd != $tableUser->getPassword()) {
+            if (!$this->userService->updateUserPassword($tableUser, $postValues->password, $secureLdapPasswd))
                 return ControllerResponse::response202(false, "Ocurrio un error al actualizar el usuario");
             $tableUser = $this->userService->getUserByLdapUser($postValues->username);
         }
@@ -56,11 +66,9 @@ final class UserController extends BaseController {
         if (!$this->userService->checkUserConnection($tableUser->getUserName(), $postValues->password))
             return ControllerResponse::response202(false, "No se puede conectar a la base de datos");
 
-        $loginView = new LoginView($tableUser->getFullName(), "sdhskjdhsjkdhskjdhskjdhjkshdjksdhjkshdk");
+        $autorizationToken = $this->generateToken($tableUser->getUserName(), $postValues->password);
+
+        $loginView = new LoginView($tableUser->getFullName(), $this->generateToken());
         return ControllerResponse::response202(true, "Bienvenido {$tableUser->getFullName()}", $loginView);
     }
 }
-
-function __construct() {
-        $this->userService = new UserService();
-    }
